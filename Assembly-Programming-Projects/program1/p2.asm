@@ -1,6 +1,6 @@
 BITS 32
 
-;System Mcros
+;System Macros
 sys_write EQU 4
 sys_read EQU 3
 sys_exit EQU 1
@@ -46,8 +46,8 @@ _start:
    mov edx, 2
    int 0x80
 
-   mov AX, 0 ;zero out AX registery
-   mov AL, [num1] ;moves num1 to AL registery
+   mov AX, 0 ;zero out AX registry
+   mov AL, [num1] ;moves num1 to AL registry
    sub AL, '0' ;converts num1 to an integer 
    mov BL, [num2] ;moves num2 into BL register
    sub BL, '0' ;converts num2 to an integer
