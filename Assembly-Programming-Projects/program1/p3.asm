@@ -47,15 +47,15 @@ _start:
    mov edx, 2
    int 0x80
 
-   mov AL, [num1] ;move num1 into AL registery
+   mov AL, [num1] ;move num1 into AL registry
    sub AL, '0' ;converts AL to an integer
-   mov BL, [num2] ;moves num2 into BL registery
+   mov BL, [num2] ;moves num2 into BL registry
    sub BL, '0' ;converts BL to an integer
    idiv BL ;divides AL by BL
    add AL, '0' ;converts AL back to a string for printing
-   add AH, '0' ;converts AH registery, which holds the remainder, back to a string for printing
+   add AH, '0' ;converts AH registry, which holds the remainder, back to a string for printing
    mov [result], AL ;moves AL register into result
-   mov [remainder], AH ;moves AH register into remaindeir
+   mov [remainder], AH ;moves AH register into remainder
 
    ;Print answer message
    mov eax, sys_write
