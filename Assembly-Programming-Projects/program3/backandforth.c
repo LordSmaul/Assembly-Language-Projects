@@ -22,7 +22,7 @@ int fact(int n)
     }
 }
 
-// Determines if a string is a plaindrome
+// Determines if a string is a palindrome
 // Called by ASM
 int palindrome(char *s)
 {
@@ -100,7 +100,7 @@ int main()
             printf("Enter an integer:\n");
             scanf("%s", factS);
 
-            // Calls assembly function taht converts input to an integer
+            // Calls assembly function that converts input to an integer
             // Program then finds the factorial of the user input
             // Passes the input to the external global variable
             factNum = factstr(factS);
